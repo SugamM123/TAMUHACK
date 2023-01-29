@@ -1,0 +1,41 @@
+
+.containers {
+    background-color: #500000;
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Verdana", sans-serif;
+  }
+  
+  .boxs {
+    background-color: #FFFFFF;
+    height: 300px;
+    padding: 150px 0;
+    text-align: center;
+    border: #500000 solid 5px;
+    flex: 1;
+    transition: 1s;
+    display: flex;
+  }
+  
+  .rad {
+    max-width:30%;
+    height:auto;
+  }
+  
+  .boxs:hover {
+    flex: 2;
+    text-align: left;
+    padding: 25px 20px;
+  }
+  
+  .infos:hover {
+    color: black;
+  }
+  
+  .infos {
+    display: flex;
+    color: transparent;
+  }
