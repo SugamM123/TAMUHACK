@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/stl.css">
+    <!-- Bootstrap 4.5 CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+	<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+   
+	<!-- Mobile Friendly -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    
+    <!-- Navigation -->
+	<!-- This creates our drop down menu so that our users are more capable to navigate through the app without any outside help-->
+	<!---->
+    <nav class="navbar bg-dark navbar-dark navbar-expand-lg">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<div class="mx-auto">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="Income.html" class="nav-link">Income&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+					<li class="nav-item"><a href="Expenses.html" class="nav-link">Expenses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+					<li class="nav-item"><a href="Overview.html" class="nav-link">Overview</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</head>
+	<py-script>
+		income = 50000
+		savings = 20000
+		debt = 15000
+
+		def give_advice(income, savings, debt):
+			if income > 0 and savings > 0 and debt == 0:
+				return "You are in good financial shape. Keep saving and investing for your future."
+			elif income > 0 and savings > 0 and debt > 0:
+				return "You have some debt, but you are saving and earning income. Keep paying off your debt and continue saving."
+			elif income > 0 and savings == 0 and debt > 0:
+				return "You have debt and no savings. Start saving a portion of your income and work on paying off your debt."
+			elif income > 0 and savings == 0 and debt == 0:
+				return "You have no savings and no debt. Start saving a portion of your income for your future."
+			else:
+				return "I'm sorry, I am not able to give advice with the information provided."		
+			
+		print(give_advice(income, savings, debt))
+
+	</py-script>
+</html>
+
