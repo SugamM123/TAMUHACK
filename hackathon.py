@@ -1,11 +1,11 @@
-import matplotlib as plt
+import matplotlib as mpl
 
 end = False
 
 # Get info about income and spending
-income = float(input('Enter your monthly income: '))
-spending = float(input('Enter your desired monthly expenses: '))
-balance = float(input('Enter net balance of money: '))
+#income = float(input('Enter your monthly income: '))
+#spending = float(input('Enter your desired monthly expenses: '))
+#balance = float(input('Enter net balance of money: '))
 invest = 0
 
 # Food expenses
@@ -44,11 +44,11 @@ while not end:
     
     # Adjusted balance
     total =  saved + balance
-    figure1 = plt.pyplot.figure()
+    figure1 = mpl.pyplot.figure()
     ax = figure1.add_axes([0,0,1,1])
     ax.axis('equal')
     ax.pie(values,labels = expenses,autopct = '%1.3f%%')
-    plt.pyplot.show()
+    mpl.pyplot.show()
     
     count+=1
     if count == 2:
